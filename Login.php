@@ -3,7 +3,7 @@
 <!-- Login page -->
 <form action="" method="post">
     <div class="from-outline mb-4">
-        <input type="text" name="username" id="username">
+        <input type="text" name="username" id="username" class="form-control">
         <label for="username">Username :</label>
 
     </div>
