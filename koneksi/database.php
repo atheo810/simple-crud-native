@@ -42,8 +42,9 @@ class addData
         $username = htmlspecialchars($data['username']);
         $email = htmlspecialchars($data['email']);
         $password = htmlspecialchars($data['password']);
+        $passwordhash = hash($password, PASSWORD_BCRYPT);
 
-        $query = "INSERT INTO user VALUES(NULL, '$username','$email','$password')";
+        $query = "INSERT INTO user VALUES(NULL, '$username','$email','$passwordhash')";
 
         mysqli_query($koneksi, $query);
 
