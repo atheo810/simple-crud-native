@@ -14,7 +14,8 @@
                 <h1 class="text-center py-3"><b> Sign Up    </b></h1>
             </div>
             <br>
-            <form action="post">
+
+            <form action="" method="post">
 
                 <!-- Bagian Input data -->
                 <div class="mx-3 mx-4">
