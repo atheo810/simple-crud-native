@@ -25,3 +25,28 @@ class Database
         return $result;
     }
 }
+
+class addData
+{
+    private $koneksi;
+
+    public function __construct(DatabaseConnectionInterface $koneksi)
+    {
+        $this->koneksi = $koneksi->connect();
+    }
+
+    public function addDataUser($data)
+    {
+        $koneksi = $this->koneksi;
+
+        $username = htmlspecialchars($data['username']);
+        $email = htmlspecialchars($data['email']);
+        $password = htmlspecialchars($data['password']);
+
+        $query = "INSERT INTO user VALUES(NULL, '$username','$email','$password')";
+
+        mysqli_query($koneksi, $query);
+
+        return mysqli_affected_rows($koneksi);
+    }
+}
