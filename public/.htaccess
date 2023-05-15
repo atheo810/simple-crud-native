@@ -1,16 +1,9 @@
+<IfModule mod_rewrite.c>
+Options -Multiviews
 
-# Options -Multiviews
-# RewriteEngine on
-# RewriteBase /crud20%project/public
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^(.*)$ index.php [L]
-
-# Aktifkan modul rewrite engine
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$  index.php?url=$1 [L]
 
-# Set base URL ke direktori public
-RewriteBase /public/
-
-# Jangan tampilkan isi direktori
-Options -Indexes
+</IfModule>
