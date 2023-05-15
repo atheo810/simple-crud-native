@@ -1,0 +1,16 @@
+
+# Options -Multiviews
+# RewriteEngine on
+# RewriteBase /crud20%project/public
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)$ index.php [L]
+
+# Aktifkan modul rewrite engine
+RewriteEngine On
+
+# Set base URL ke direktori public
+RewriteBase /public/
+
+# Jangan tampilkan isi direktori
+Options -Indexes
