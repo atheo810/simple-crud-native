@@ -1,5 +1,7 @@
 <?php
 
+include "encrypt.php";
+
 class Database
 {
     private $koneksi;
@@ -29,8 +31,9 @@ class Database
 class addData
 {
     private $koneksi;
+    private $psr;
 
-    public function __construct(DatabaseConnectionInterface $koneksi)
+    public function __construct(DatabaseConnectionInterface $koneksi, encrypt $psr)
     {
         $this->koneksi = $koneksi->connect();
     }
@@ -42,8 +45,9 @@ class addData
         $username = htmlspecialchars($data['username']);
         $email = htmlspecialchars($data['email']);
         $password = htmlspecialchars($data['password']);
+        $psr = $this->psr->psrEncrypt($password);
 
-        $query = "INSERT INTO user VALUES(NULL, '$username','$email','$password')";
+        $query = "INSERT INTO user VALUES(NULL, '$username','$email','$psr')";
 
         mysqli_query($koneksi, $query);
 
