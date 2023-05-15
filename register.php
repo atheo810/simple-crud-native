@@ -19,20 +19,20 @@
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Password</label>
-                            <input type="password" class="form-control" placeholder="Password" required>
+                            <input type="password" class="form-control" id="passwordInput" placeholder="Password" required>
                         </div>
                         <div class="mb-2">
                             <label for="" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" placeholder="Confirm Password" required>
-                            <input class="form-check-input mt-2" type="checkbox" id="exampleCheckbox">
-                            <label class="form-check-label mt-1" for="exampleCheckbox"> Show Password </label>
+                            <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Confirm Password" required>
+                            <input class="form-check-input mt-2" type="checkbox" id="showPassword">
+                            <label class="form-check-label mt-1" for="showPassword">Show Password</label>
                         </div>
                         <!-- Tombol register -->
                         <div class="d-flex justify-content-center mt-3"> 
                             <button type="submit" class="btn btn-primary w-50">Register</button>
                         </div>
-
                     </div>
+                    <!-- Bagian log in href -->
                     <div class="align-items-center">
                         <p class="text-center mt-3"> Sudah punya akun?  <a href="Log-In.html">Log In</a> </p>
                     </div>
