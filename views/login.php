@@ -1,5 +1,5 @@
 <?php include './component/header.php'; ?>
-<div class="contianer">
+<div class="container m-5">
     <form action="" method="post">
         <div class="mb-3">
             <label for="username" class="form-label">Email address</label>
