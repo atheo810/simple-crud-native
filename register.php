@@ -7,6 +7,7 @@
                 <h1 class="text-center py-3"> Register </h1>
             </div>
             <br>
+
             <form action="" method="post">
 
                 <!-- Bagian Input data -->
@@ -30,8 +31,21 @@
                         <label for="confirm_password" class="form-label">Confirm Password</label>
                         <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
 
-                        <input class="form-check-input mt-2" type="checkbox" id="exampleCheckbox">
+                        <input class="form-check-input mt-2" onclick="showPassword()" type="checkbox" id="showpass">
                         <label class="form-check-label mt-1" for="exampleCheckbox"> Show Password </label>
+                        <script>let pass = document.getElementById('password');
+                                let conPass = document.getElementById('confirm_password')
+                        function showPassword(){
+                            if (pass.type === "password" && conPass.type === "password") {
+                                pass.type = "text";
+                                conPass.type = "text";
+                            }
+                            else {
+                                pass.type = "password";
+                                conPass.type = "password";
+                            }
+                        }
+                    </script>
                     </div>
 
                     <!-- Tombol register -->
