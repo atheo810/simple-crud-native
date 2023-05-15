@@ -11,7 +11,7 @@
     <div class="row d-flex justify-content-center align-items-center h-100 p-5 vh-100">
         <div class="col-lg-6 col-md-8 col-sm-10 col-10 border-dark rounded-4 bg-white shadow-lg">
             <div class="border-bottom">
-                <h1 class="text-center py-3"><b> Sign Up    </b></h1>
+                <h3 class="text-center py-3"><b> Sign Up    </b></h3>
             </div>
             <br>
 
