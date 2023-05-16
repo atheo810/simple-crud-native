@@ -43,7 +43,7 @@
              </form>
              <hr>
              <div class="container my-3">
-        <p class="w-100 text-center">— Didn't Have An Accout? <a href="./register.php">Sign Up</a> —</p>
+        <p class="w-100 text-center">— Didn't Have An Account? <a href="./register.php">Sign Up</a> —</p>
         </div>
         </div>
     </div>
