@@ -63,7 +63,7 @@
 
                 </div>
                 <div class="align-items-center">
-                    <p class="text-center mt-3"> Already Have An Account? <a href="/views/login.php">Log In</a> </p>
+                    <p class="text-center mt-3"> Already Have An Account? <a href="./login.php">Log In</a> </p>
                 </div>
                 <div class="border-top">
                     <p class="text-center mt-2 py-2"> Copyright by Yuka Honjo </p>
@@ -73,37 +73,37 @@
     </div>
 </div>
 <script>
-                                let pass = document.getElementById('password');
-                                let conPass = document.getElementById('confirm_password');
-                                let message = document.getElementById('message');
-                                let btn = document.getElementById('signup');
-                        function showPassword(){
-                            if (pass.type === "password" && conPass.type === "password") {
-                                pass.type = "text";
-                                conPass.type = "text";
-                            }
-                            else {
-                                pass.type = "password";
-                                conPass.type = "password";
-                            }
-                        }
-                        function check(){
-                            if (pass.value === conPass.value ) {
-                                message.innerHTML = "Password Match!";
-                                message.style.color = "green";
-                                btn.disabled = false;
-                                message.style.display = "";
-                            }
-                            else if (conPass.value === ""){
-                                message.style.display = "none";
-                                btn.disabled = true;
-                            }
-                            else {
-                                message.innerHTML = "Password Didn't Match";
-                                message.style.color = "red";
-                                message.style.display = "";
-                                btn.disabled = true;
-                            }
-                        }
+let pass = document.getElementById('password');
+let conPass = document.getElementById('confirm_password');
+let message = document.getElementById('message');
+let btn = document.getElementById('signup');
+function showPassword(){
+    if (pass.type === "password" && conPass.type === "password") {
+        pass.type = "text";
+        conPass.type = "text";
+    }
+    else {
+        pass.type = "password";
+        conPass.type = "password";
+    }
+}
+function check(){
+    if (pass.value === conPass.value ) {
+        message.innerHTML = "Password Match!";
+        message.style.color = "green";
+        btn.disabled = false;
+        message.style.display = "";
+    }
+    else if (conPass.value === ""){
+        message.style.display = "none";
+        btn.disabled = true;
+    }
+    else {
+        message.innerHTML = "Password Didn't Match";
+        message.style.color = "red";
+        message.style.display = "";
+        btn.disabled = true;
+    }
+}
                     </script>
 <?php include './component/footer.php'; ?>
