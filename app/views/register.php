@@ -75,7 +75,7 @@
 
                 </div>
                 <div class="align-items-center">
-                    <p class="text-center mt-3"> Already Have An Account? <a href="Login.php">Log In</a> </p>
+                    <p class="text-center mt-3"> Already Have An Account? <a href="/views/login.php">Log In</a> </p>
                 </div>
                 <div class="border-top">
                     <p class="text-center mt-2 py-2"> Copyright by Yuka Honjo </p>
