@@ -48,28 +48,16 @@
 
                     <div class="mb-2">
                         <label for="confirm_password" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" required>
-
+                        <input type="password" class="form-control" onkeyup="check()" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" required>
+                        <p id="message"></p>
                         <input class="form-check-input mt-2" onclick="showPassword()" type="checkbox" id="showpass">
                         <label class="form-check-label mt-1" for="showpass"> Show Password </label>
-                        <script>let pass = document.getElementById('password');
-                                let conPass = document.getElementById('confirm_password')
-                        function showPassword(){
-                            if (pass.type === "password" && conPass.type === "password") {
-                                pass.type = "text";
-                                conPass.type = "text";
-                            }
-                            else {
-                                pass.type = "password";
-                                conPass.type = "password";
-                            }
-                        }
-                    </script>
+                        
                     </div>
 
                     <!-- Tombol register -->
                     <div class="d-flex justify-content-center mt-3">
-                        <button type="submit" class="btn btn-success w-20">Sign Up</button>
+                        <button type="submit" id="signup" class="btn btn-success w-20">Sign Up</button>
                         <button type="reset" class="btn btn-danger mx-3 w-20">Clear All</button>
                     </div>
 
@@ -84,4 +72,38 @@
         </div>
     </div>
 </div>
+<script>
+                                let pass = document.getElementById('password');
+                                let conPass = document.getElementById('confirm_password');
+                                let message = document.getElementById('message');
+                                let btn = document.getElementById('signup');
+                        function showPassword(){
+                            if (pass.type === "password" && conPass.type === "password") {
+                                pass.type = "text";
+                                conPass.type = "text";
+                            }
+                            else {
+                                pass.type = "password";
+                                conPass.type = "password";
+                            }
+                        }
+                        function check(){
+                            if (pass.value === conPass.value ) {
+                                message.innerHTML = "Password Match!";
+                                message.style.color = "green";
+                                btn.disabled = false;
+                                message.style.display = "";
+                            }
+                            else if (conPass.value === ""){
+                                message.style.display = "none";
+                                btn.disabled = true;
+                            }
+                            else {
+                                message.innerHTML = "Password Didn't Match";
+                                message.style.color = "red";
+                                message.style.display = "";
+                                btn.disabled = true;
+                            }
+                        }
+                    </script>
 <?php include './component/footer.php'; ?>

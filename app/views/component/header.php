@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../../public/bootstrap/css/bootstrap.min.css">
 =======
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
->>>>>>> 93771cf6c09d4a0d0611773bf04a68e90df7afee
+>>>>>>> 93771cf6c09d4a0d0611773bf04a68e90df7afee    
     <title><?= ucwords(substr(basename($_SERVER['PHP_SELF']), 0, -4)); ?></title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
