@@ -42,12 +42,17 @@ class addData
     {
         $koneksi = $this->koneksi;
 
+        $firstname = htmlspecialchars($data['fname']);
+        $lastname = htmlspecialchars($data['fname']);
+        $fullname = $firstname . $lastname;
+
         $username = htmlspecialchars($data['username']);
         $email = htmlspecialchars($data['email']);
         $password = htmlspecialchars($data['password']);
+
         $psr = $this->psr->psrEncrypt($password);
 
-        $query = "INSERT INTO user VALUES(NULL, '$username','$email','$psr')";
+        $query = "INSERT INTO user VALUES(NULL, '$fullname', '$username','$email','$psr')";
 
         mysqli_query($koneksi, $query);
 
