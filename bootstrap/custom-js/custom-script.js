@@ -1,6 +1,6 @@
 const passwordInput = document.getElementById('passwordInput');
 const confirmPasswordInput = document.getElementById('confirmPasswordInput');
-const showPassword = document.getElementById('showPassword');
+const showPassword = document.getElementById('showPassword'); 
 
 showPassword.addEventListener('change', function() {
     if (showPassword.checked) {
