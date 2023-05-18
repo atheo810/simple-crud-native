@@ -9,13 +9,12 @@
 
   <!-- LINK -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <title><?= ucwords(substr(basename($_SERVER['PHP_SELF']), 0, -4)); ?></title>
+  <title><?= $data['judul']; ?></title>
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="styling/css/sidebar.css">
 
   <!-- SCRIPT -->
-  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>

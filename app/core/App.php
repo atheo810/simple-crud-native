@@ -41,7 +41,7 @@ class App
         }
 
         // jalankan controllers, method, dan params jika terdapat 
-        call_user_func([$this->controller, $this->method], $this->params);
+        call_user_func_array([$this->controller, $this->method], $this->params);
     }
 
     // pemisah URL
