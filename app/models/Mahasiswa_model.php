@@ -8,12 +8,12 @@ class Mahasiswa_model
     public function __construct()
     {
         //data source name 
-        $dsn = 'mysql:host=localhost;dbname=datapercobaan';
+        $dsn = "mysql:host=localhost;dbname=datapercobaan";
         try {
-            $this->dbh = new PDO($dsn, 'roo,', '');
-        } catch (PDOException $e) {
-           die($e->getMessage());
-        }
+            $this->dbh = new PDO($dsn, 'root', '');
+          } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+          }
     }
 
     public function getAllMahasiswa()

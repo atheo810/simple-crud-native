@@ -1,0 +1,21 @@
+{
+    "name": "crud/native",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Crud\\Native\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "atheo810",
+            "email": "atheos810@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.11.0",
+        "doctrine/dbal": "^3.2",
+        "symfony/yaml": "^5.4",
+        "symfony/cache": "^5.4"
+    }
+}
